@@ -1,5 +1,7 @@
 # Java_chatroom
-my first project
+Java 聊天室
+应西电软院老师要求，实现该大作业。
+学弟学妹有需求可以参考一下
  
 This is a java project about socket and swing.
 I also used MySQL to storage users' information.
