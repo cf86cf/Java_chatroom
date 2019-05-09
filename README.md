@@ -3,20 +3,22 @@ Java 聊天室
 应西电软院老师要求，实现该大作业。
 学弟学妹有需求可以参考一下
  
-This is a java project about socket and swing.
-I also used MySQL to storage users' information.
-Use Mail to send e-mail to check the registration.
-By creating some frame window to display the function.
 
-### The project should apart for two parts.
-One is chatroom. The other is server.
+* 使用JDBC连接数据库，通过函数调用进行数据库的访问，分别实现用户数据的存储与读取。
 
+* 建立一个比较完整的用户使用流程，包括登陆，注册，以及使用三部分。
 
-### I put them in the main.java
-you just need to run two file in order.
-Start the server first, at the same time, we open a port to transport contents between clients and server.
-Then you can run serveral clients to test the chatroom.
+* 利用Java Socket 编程实现网络聊天的功能，在进行聊天时，可客户端先将用户发送的消息进行简单的分析并处理，然后发往服务器端，服务器再对消息分析并处理，发送给其他客户端。
 
-If you have any question, mail me to get detials.
+服务器端任务包括:
+- 建立ServerSocket, 并且不断进行侦听是否有客户端连接或者断开连接。
+- 作为消息转发及处理中心，所有客户端的消息都传到服务器端，由服务器端根据要求发送给不同用户。
 
+客户端任务包括:
+- 与服务器端建立通信通道，向服务器端发送消息。
+- 接收来自服务器的消息。
 
+此外，采用了JavaMail 对邮箱发送验证码，需开启qqmail 的IMAP/SMTP协议 
+数据库采用MySql ，在存储时 密码使用md5加密
+
+私聊功能 /r username: 实现对单用户的消息发送
